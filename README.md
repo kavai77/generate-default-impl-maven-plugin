@@ -3,7 +3,7 @@ generate-default-impl-maven-plugin
 This plugin is intended to generate an empty implementation of an arbitrary Java interface.
 Let's look an example. Provided we have an interface like:
 
-<code>
+```java
 public interface TestInterface
 {
     char getChar(String param);
@@ -13,11 +13,11 @@ public interface TestInterface
     String getName(String firstName);
     void doSomething();
 }
-</code>
+```
 
 This tool helps you generate a code like this:
 
-<code>
+```java
 public class TestInterfaceDefaultImpl implements com.company.TestInterface {
      @Override public char getChar(java.lang.String p1) {return 0;}
      @Override public float getFloat() {return 0;}
@@ -26,13 +26,13 @@ public class TestInterfaceDefaultImpl implements com.company.TestInterface {
      @Override public java.lang.String getName(java.lang.String p1) {return null;}
      @Override public void doSomething() {}
 }
-</code>
+```
 
 This means that for every primitive type we it returns a 0 or false, and for every object ot returns null;
 After you activate this plugin in your generate-sources maven phase, you can override the generated class.
 
 You can activate the plugin with the following snippet:
-<code><![CDATA[
+```xml
             <plugin>
                 <groupId>com.github.kavaicsaba</groupId>
                 <artifactId>generate-default-impl-plugin</artifactId>
@@ -59,4 +59,4 @@ You can activate the plugin with the following snippet:
                     </dependency>                    
                 </dependencies>
             </plugin>
-]]></code>
+```
