@@ -15,7 +15,7 @@ public interface TestInterface
 }
 ```
 
-This tool helps you generate a code like this:
+This tool generates the following code:
 
 ```java
 public class TestInterfaceDefaultImpl implements com.company.TestInterface {
@@ -28,35 +28,39 @@ public class TestInterfaceDefaultImpl implements com.company.TestInterface {
 }
 ```
 
-This means that for every primitive type we it returns a 0 or false, and for every object ot returns null;
+This means that for every primitive type it returns a 0 or false, and for every object ot returns null.
 After you activate this plugin in your generate-sources maven phase, you can override the generated class.
 
-You can activate the plugin with the following snippet:
+You can activate the plugin with the following maven snippet:
 ```xml
-<plugin>
-    <groupId>com.github.kavaicsaba</groupId>
-    <artifactId>generate-default-impl-plugin</artifactId>
-    <version>1.0</version>
-    <configuration>
-        <interfaces>
-            <interface>com.company.TestInterface</interface>
-            <interface>com.company.MyInterface2</interface>
-        </interfaces>
-        <targetPackage>com.company.generatedstuff</targetPackage>
-    </configuration>
-    <executions>
-        <execution>
-            <goals>
-                <goal>generate-default-impl</goal>
-            </goals>                        
-        </execution>
-    </executions> 
-    <dependencies>                    
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>${project.artifactId}</artifactId>
-            <version>${project.version}</version>
-        </dependency>                    
-    </dependencies>
-</plugin>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>com.github.kavaicsaba</groupId>
+            <artifactId>generate-default-impl-plugin</artifactId>
+            <version>1.0</version>
+            <configuration>
+                <interfaces>
+                    <interface>com.company.TestInterface</interface>
+                    <interface>com.company.MyInterface2</interface>
+                </interfaces>
+                <targetPackage>com.company.generatedstuff</targetPackage>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>generate-default-impl</goal>
+                    </goals>                        
+                </execution>
+            </executions> 
+            <dependencies>                    
+                <dependency>
+                    <groupId>${project.groupId}</groupId>
+                    <artifactId>${project.artifactId}</artifactId>
+                    <version>${project.version}</version>
+                </dependency>                    
+            </dependencies>
+        </plugin>
+    </plugins>
+</build>    
 ```
