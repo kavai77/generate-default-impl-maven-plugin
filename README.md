@@ -33,30 +33,30 @@ After you activate this plugin in your generate-sources maven phase, you can ove
 
 You can activate the plugin with the following snippet:
 ```xml
-            <plugin>
-                <groupId>com.github.kavaicsaba</groupId>
-                <artifactId>generate-default-impl-plugin</artifactId>
-                <version>1.0</version>
-                <configuration>
-                    <interfaces>
-                        <interface>com.company.TestInterface</interface>
-                        <interface>com.company.MyInterface2</interface>
-                    </interfaces>
-                    <targetPackage>com.company.generatedstuff</targetPackage>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate-default-impl</goal>
-                        </goals>                        
-                    </execution>
-                </executions> 
-                <dependencies>                    
-                    <dependency>
-                        <groupId>${project.groupId}</groupId>
-                        <artifactId>${project.artifactId}</artifactId>
-                        <version>${project.version}</version>
-                    </dependency>                    
-                </dependencies>
-            </plugin>
+<plugin>
+    <groupId>com.github.kavaicsaba</groupId>
+    <artifactId>generate-default-impl-plugin</artifactId>
+    <version>1.0</version>
+    <configuration>
+        <interfaces>
+            <interface>com.company.TestInterface</interface>
+            <interface>com.company.MyInterface2</interface>
+        </interfaces>
+        <targetPackage>com.company.generatedstuff</targetPackage>
+    </configuration>
+    <executions>
+        <execution>
+            <goals>
+                <goal>generate-default-impl</goal>
+            </goals>                        
+        </execution>
+    </executions> 
+    <dependencies>                    
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${project.artifactId}</artifactId>
+            <version>${project.version}</version>
+        </dependency>                    
+    </dependencies>
+</plugin>
 ```
