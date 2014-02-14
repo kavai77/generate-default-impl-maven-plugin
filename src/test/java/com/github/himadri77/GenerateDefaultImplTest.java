@@ -1,4 +1,4 @@
-package com.github.kavaicsaba;
+package com.github.himadri77;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

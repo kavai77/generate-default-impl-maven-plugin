@@ -36,7 +36,7 @@ You can activate the plugin with the following maven snippet:
 <build>
     <plugins>
         <plugin>
-            <groupId>com.github.kavaicsaba</groupId>
+            <groupId>com.github.himadri77</groupId>
             <artifactId>generate-default-impl-plugin</artifactId>
             <version>1.0</version>
             <configuration>
