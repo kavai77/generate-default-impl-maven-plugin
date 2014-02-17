@@ -38,7 +38,7 @@ You can activate the plugin with the following maven snippet:
         <plugin>
             <groupId>com.github.himadri77</groupId>
             <artifactId>generate-default-impl-plugin</artifactId>
-            <version>1.0</version>
+            <version>1.2</version>
             <configuration>
                 <interfaces>
                     <interface>com.company.TestInterface</interface>
