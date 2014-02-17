@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.himadri77</groupId>
     <artifactId>generate-default-impl-plugin</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <packaging>maven-plugin</packaging>
     
     <name>Generate Default Implementation Maven Plugin</name>
