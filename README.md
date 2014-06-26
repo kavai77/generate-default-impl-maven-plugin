@@ -38,7 +38,7 @@ You can activate the plugin with the following maven snippet:
         <plugin>
             <groupId>com.github.himadri77</groupId>
             <artifactId>generate-default-impl-plugin</artifactId>
-            <version>1.2</version>
+            <version>1.3</version>
             <configuration>
                 <interfaces>
                     <interface>com.company.TestInterface</interface>
@@ -63,4 +63,17 @@ You can activate the plugin with the following maven snippet:
         </plugin>
     </plugins>
 </build>    
+```
+
+Other optional configuration parameters:
+```xml
+ <configuration>
+     <!-- The generated class name will be the interface name + classNamePostfix parameter -->
+     <!-- Default: DefaultImpl -->    
+     <classNamePostfix>DefaultImpl</classNamePostfix> 
+     
+     <!-- Where to put the generated java files -->
+     <!-- Default: ${project.build.directory}/generated-sources/java -->    
+     <outputDirectory>${project.build.directory}/generated-sources/java</outputDirectory>     
+ </configuration>             
 ```
